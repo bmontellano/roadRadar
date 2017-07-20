@@ -86,48 +86,51 @@
 
       {incident_type: "stalled car", user: "Cornelius James III", time: "10:15", comments: "Pick-up truck is stalled in the middle lane", lat: 33.9415889, lng: -118.40852999999998}
     ]
+        function initMap() {
 
-    function initMap() {
-
-      // sets up map with intial centered location and zoom level
-      var map = new GMaps({
-        div: "#map",
-        zoom: 11,
-        center: la_default
-      });
+          // sets up map with intial centered location and zoom level
+          var map = new GMaps({
+            div: "#map",
+            zoom: 11,
+            center: la_default
+          });
 
 
-    //Grab all user ids
-      incident_list = []
-      var requestSettings = {
-       method: 'Get',
-       url: '/users/posts'
-       }
-
-     function cb(data) {
-        incident_list = data
-       console.log(incident_list)
-
-       incident_list.forEach(function(inc, i){
-         console.log(inc, i)
-         map.addMarker({
-           lat: inc.post.lat,
-           lng: inc.post.lng,
-           title: i,
-           map: map,
-           infoWindow: {
-             content: `<p>This is the description of incident # ${i + 1}: <br><br>
-             Type: ${inc.post.incident} <br><br>
-             User: ${inc.user} <br><br>
-             Time: Posted ${Math.floor((Date.now() - inc.post.timestamp)/60000)} min ago <br><br>
-             Additional Info: ${inc.post.comment} <br><br>
-             Upvote Downvote Delete
-             </p>`
+        //Grab all user ids
+          incident_list = []
+          var requestSettings = {
+           method: 'Get',
+           url: '/users/posts'
            }
-         })
-       })
 
-        }
+         function cb(data) {
+            incident_list = data
+           console.log(incident_list)
+
+           incident_list.forEach(function(inc, i){
+             console.log(inc, i)
+             map.addMarker({
+               lat: inc.post.lat,
+               lng: inc.post.lng,
+               title: i,
+               map: map,
+               infoWindow: {
+                 content: `<p>This is the description of incident # ${i + 1}: <br><br>
+                 Type: ${inc.post.incident} <br><br>
+                 User: ${inc.user} <br><br>
+                 Time: Posted ${Math.floor((Date.now() - inc.post.timestamp)/60000)} min ago <br><br>
+                 Additional Info: ${inc.post.comment} <br><br>
+                 Upvote Downvote Delete
+                 </p>`
+               }
+             })
+
+
+
+           })
+
+          }
+
 
      $.ajax(requestSettings).done(cb)
 
