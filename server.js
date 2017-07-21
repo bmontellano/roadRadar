@@ -1,6 +1,6 @@
 const
-  dotenv = require('dotenv').load(),
   express = require('express'),
+  dotenv = require('dotenv').load(),
   app = express(),
   ejs = require('ejs'),
   ejsLayouts = require('express-ejs-layouts'),
