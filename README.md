@@ -1,18 +1,18 @@
-# <a href = 'https://salty-badlands-14977.herokuapp.com/' > Road Radar </a>
+# <a href = 'https://roadradar.herokuapp.com/' > Road Radar </a>
 
 
 ## Technologies Used
 HTML | CSS | Javascript | jQuery | Mongoose | gMaps.js | NodeJS | Express | Google Maps API | Bootstrap
 
 ## Approach Taken
-We wanted to create an app where users could input their own incidents that they see in realtime. They can enter what kind of incident it is, the address where the incident is, and add some additional comments on the specific situation. As a user goes on the website, they are able to see all incidents posted in the last twelve hours, but can only post an incident if they have an account. By clicking the markers on the map, any user can see the details of the incident including how long ago the incident was reported. 
+We wanted to create an app where users could input their own incidents that they see in realtime. They can enter what kind of incident it is, the address where the incident is, and add some additional comments on the specific situation. As a user goes on the website, they are able to see all incidents posted in the last twelve hours, but can only post an incident if they have an account. By clicking the markers on the map, any user can see the details of the incident including how long ago the incident was reported.
 
 David: Map Functionality | Scrum master
 Brian: Database | Router | Github Manager
 Gen: Frontend | Authentication
 
 ## Installation Instructions
-In your terminal, go to your project directory and run npm install to get all the packages necessary to run the web app. Then in separate terminal tabs, run mongod and nodemon. Then open your browser and navigate to your localhost to run the web app. 
+In your terminal, go to your project directory and run npm install to get all the packages necessary to run the web app. Then in separate terminal tabs, run mongod and nodemon. Then open your browser and navigate to your localhost to run the web app.
 
 ## Trello
 <a href = https://trello.com/b/G5PowTKz/project-roadradar > Click Here </a>
@@ -24,6 +24,6 @@ In your terminal, go to your project directory and run npm install to get all th
 <a hred = #> Sample Model </a>
 
 ## Unsolved Problems
-We weren't able to create a method to delete a post from the map but still keep it in the database. 
+We weren't able to create a method to delete a post from the map but still keep it in the database.
 
-Were not able to implement upvote/downvote functionality 
+Were not able to implement upvote/downvote functionality
