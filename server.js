@@ -1,7 +1,7 @@
 const
   express = require('express'),
   dotenv = require('dotenv').load(),
-  app = express(),
+    app = express(),
   ejs = require('ejs'),
   ejsLayouts = require('express-ejs-layouts'),
   mongoose = require('mongoose'),
