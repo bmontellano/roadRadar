@@ -1,1 +1,1 @@
-web: node User.ejs
+web: node users.js
