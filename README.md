@@ -1,4 +1,4 @@
-# <a href = # > Road Radar </a>
+# <a href = 'https://salty-badlands-14977.herokuapp.com/' > Road Radar </a>
 
 
 ## Technologies Used
@@ -12,7 +12,7 @@ Brian: Database | Router | Github Manager
 Gen: Frontend | Authentication
 
 ## Installation Instructions
-
+In your terminal, go to your project directory and run npm install to get all the packages necessary to run the web app. Then in separate terminal tabs, run mongod and nodemon. Then open your browser and navigate to your localhost to run the web app. 
 
 ## Trello
 <a href = https://trello.com/b/G5PowTKz/project-roadradar > Click Here </a>
