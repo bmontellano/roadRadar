@@ -9,8 +9,8 @@ const
         incident: {type: String, required: true},
         comment: String,
         timestamp: {type:Number, default: new Date().getTime()},
-        active: {type: Boolean, default: true}
-    }, {timestamps: true}),
+        active: {type: Boolean, default: true},
+    }),
   userSchema = new mongoose.Schema({
     local: {
         name: String,

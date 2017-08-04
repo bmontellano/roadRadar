@@ -201,19 +201,23 @@
        console.log(incident_list)
 
        incident_list.forEach(function(inc, i){
-         console.log(inc, i)
+        //  console.log(inc, i)
+        console.log(Date.now())
+         console.log(inc.post.timestamp)
+         console.log(Math.floor((Date.now() - inc.post.timestamp)/60000))
+
           var markerPath
 
           if(inc.post.incident == "Construction"){
-            markerPath = 'images/orange_markerC.png'
+            markerPath = 'http://i.imgur.com/qvPGQvO.png'
           }else if(inc.post.incident == "Speed Trap"){
-            markerPath = 'images/blue_markerP.png'
+            markerPath = 'http://i.imgur.com/kpKb6UQ.png'
           }else if(inc.post.incident == "Stalled Car"){
-            markerPath = 'images/darkgreen_markerS.png'
+            markerPath = 'http://i.imgur.com/KP6zecC.png'
           }else if(inc.post.incident == "Broken Signal"){
-            markerPath = 'images/yellow_markerB.png'
+            markerPath = 'http://i.imgur.com/bBG0MS7.png'
           }else if(inc.post.incident == "Accident"){
-            markerPath = 'images/red_markerA.png'
+            markerPath = 'http://i.imgur.com/4R1iSgK.png'
           }
           console.log(markerPath)
           console.log(inc.post.incident)
