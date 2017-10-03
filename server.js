@@ -1,7 +1,7 @@
 const
   express = require('express'),
   dotenv = require('dotenv').load(),
-    app = express(),
+  app = express(),
   ejs = require('ejs'),
   ejsLayouts = require('express-ejs-layouts'),
   mongoose = require('mongoose'),
@@ -12,7 +12,6 @@ const
   session = require('express-session'),
   MongoDBStore = require('connect-mongodb-session')(session),
   passport = require('passport'),
-
   passportConfig = require('./config/passport.js'),
   userRoutes = require('./routes/users.js'),
   User = require('./models/user')
@@ -138,15 +137,6 @@ app.get('/users/:id/posts/:post_id', (req, res) => {
   })
 })
 
-//REMOVE A USER'S POST FROM DISPLAY
-// app.post('/users/remove', (req, res) => {
-//   User.findById(req.params.id, (err,user) =>{
-//     if (err) return console.log(err)
-//     var post = user.posts.id(req.params.post_id)
-//     res.json(post)
-//   })
-// })
-
 app.post('/users/inactive', (req, res) => {
 
   var user = new User(req.body.myUser);
@@ -167,29 +157,3 @@ app.post('/users/inactive', (req, res) => {
     res.redirect('/')
   })
 })
-
-  // User.findById(req.body.myUser, (err, user) => {
-  //   if (err) return console.log(err)
-  //   console.log("MY BODYY ---------");
-  //   console.log(req.body)
-  //   console.log("------------");
-  //   var myPost = req.body.myPost
-  //   myPost.active = false
-  //   user.posts.push(myPost)
-  //   user.save((err) => {
-  //     res.redirect('/')
-  //     console.log(err)
-  //   })
-  //   })
-  // })
-
-
-//   app.post('/albums/:id/songs', (req, res) => {
-//   Album.findById(req.params.id, (err,album) => {
-//     if (err) return console.log(err)
-//     album.songs.push(req.body)
-//     album.save((err) => {
-//       res.json(album)
-//     })
-//   })
-// })

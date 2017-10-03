@@ -124,17 +124,17 @@
     <div class = 'topnav'>
         <a href= '/'> Road Radar </a>
         <% if(login) { %>
-        <a href= '/logout'>Logout </a>
+          <a href= '/logout'>Logout </a>
         <% } else {  %>
-        <a href= '/login'>Login </a>
-        <a href= '/signup'>Signup </a>
+          <a href= '/login'>Login </a>
+          <a href= '/signup'>Signup </a>
         <% }  %>
     </div>
 
   <% if(!login){  %>
-  <div class = 'description'>
-    <p> This is an app where you can report accidents and stuff </p>
-  </div>
+    <div class = 'description'>
+      <p> This is an app where you can report accidents and stuff </p>
+    </div>
   <% } %>
 
   <div class = 'markerKey'>
@@ -167,7 +167,7 @@
 
     <div id = 'map_container'>
       <% if(login) { %>
-      <button id="post_button"> Report An Incident </button>
+        <button id="post_button"> Report An Incident </button>
       <% } %>
       <div id="map"></div>
     </div>
